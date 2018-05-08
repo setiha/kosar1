@@ -28,7 +28,6 @@ RenderList();
 function RenderList() {
   ResetList();
 
-
   let mappedList = itemNames.map(function(itemName, index) {
     let itemString = [
       // terméknév
@@ -63,12 +62,11 @@ function OnButtonAddClick() {
   AddNewItem();
 }
 
-function OnInputKeyup(event){
-  
-    if(event.key == 'Enter'){
-      // hozzáadás
-      AddNewItem();
-    }
+function OnInputKeyup(event) {
+  if (event.key == 'Enter') {
+    // hozzáadás
+    AddNewItem();
+  }
 }
 
 // egyéb függvények
