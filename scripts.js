@@ -6,7 +6,7 @@ let inputItemBasePrice = document.getElementById('itemBasePrice');
 let buttonAdd = document.getElementById('buttonAdd');
 let listItemList = document.getElementById('itemList');
 
-// változók
+
 
 let itemNames = ['tej', 'kenyér', 'gumicukor'];
 let itemCounts = [2, 5, 10];
