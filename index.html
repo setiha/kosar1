@@ -12,29 +12,45 @@
 
 
     <h1>Kosár</h1>
-
+<main id="app">
     <!-- hozzáadás -->
     <div>
-        <input type="text" id="itemName" placeholder="Termék neve">
+        <input type="text"placeholder="Termék neve" v-model="newItem.name" @keydown.enter = "AddNewItem()">
     </div>
     <div>
-        <input type="number" id="itemCount" placeholder="Darabszám">
-        <span> db </span>
+        <input type="number" placeholder="Darabszám" v-model="newItem.count" @keydown.enter = "AddNewItem()">
     </div>
     <div>
-        <input type="number" id="itemBasePrice" placeholder="Egységár">
+        <input type="number" placeholder="Egységár" v-model="newItem.basePrice" @keydown.enter = "AddNewItem()">
         <span> Ft </span>
     </div>
     <div>
-        <button id="buttonAdd">Hozzáadás</button>
+        <button @click = "AddNewItem()">Hozzáadás</button>
     </div>
 
     <!-- lista -->
-    <ul id="itemList">
+    <ul>
+        <li v-for ="item in itemCollection">{{item.name}}
+        <ul>
+            <li>
+                darabszam :{{item.count}}
+            </li>
+            <li>
+                egysegar :{{item.basePrice}}
+            </li>
+            <li>
+                osszesen :{{item.GetTotalPrice()}}
+            </li>
+        </ul>
+        </li>
     </ul>
 
+    <span>osszegzes: {{GetTotal()}}</span>
+</main>
     <!-- scripts.js -->
-    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script defer src="CartItem.js"></script>
+    <script defer src="scripts-vue.js"></script>
 
 </body>
 
