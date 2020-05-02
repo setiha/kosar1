@@ -57,7 +57,7 @@ function RenderListItem(text) {
 
 // feliratkozó függvények
 
-function OnButtonAddClick() {
+function OnButtonAddClick()   {
   // hozzáadás
   AddNewItem();
 }
